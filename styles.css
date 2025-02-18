@@ -157,20 +157,44 @@ h2 {
 .story-card {
     border: black solid 1px;
     text-align: center;
-    height: 100px;
+    height: 120px;
     width: 300px;
     padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.story-card:not(.active) {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.story-card.active {
+    opacity: 1;
+    transform: scale(1.05);
+    border: 2px solid #fff;
 }
 
 #story-nav button {
     width: 100px;
     height: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #ff6584;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#story-nav button:hover {
+    background-color: #e94e77;
 }
 
 #story-nav {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-top: 20px;
 }
 
 /* around the world */
@@ -184,6 +208,7 @@ h2 {
     text-align: center;
     margin: 20px;
 }
+
 
 /* daily */
 #daily-challenge {

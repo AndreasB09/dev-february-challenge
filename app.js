@@ -47,3 +47,35 @@ themeSwitch.addEventListener("click", () => {
         localStorage.removeItem("theme");
     }
 })
+
+//stories
+const stories = document.querySelectorAll(".story-card");
+const prevBtn = document.getElementById("prev-story");
+const nextBtn = document.getElementById("next-story");
+
+let activeIndex = 0;
+
+function updateActiveStory() {
+    stories.forEach((story, index) => {
+        story.classList.toggle("active", index === activeIndex);
+    });
+}
+
+updateActiveStory();
+
+nextBtn.addEventListener("click", () => {
+    activeIndex = (activeIndex + 1) % stories.length;
+    updateActiveStory();
+});
+
+prevBtn.addEventListener("click", () => {
+    activeIndex = (activeIndex - 1 + stories.length) % stories.length;
+    updateActiveStory();
+});
+
+stories.forEach((story, index) => {
+    story.addEventListener("click", () => {
+        activeIndex = index;
+        updateActiveStory();
+    });
+});
