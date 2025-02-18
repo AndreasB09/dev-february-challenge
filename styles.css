@@ -147,11 +147,42 @@ h2 {
     padding: 20px;
 }
 
+#story-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+}
+
+.story-card {
+    border: black solid 1px;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    padding: 20px;
+}
+
+#story-nav button {
+    width: 100px;
+    height: 50px;
+}
+
+#story-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
 /* around the world */
 #global-expressions {
     border: black solid 1px;
     margin: 20px;
     padding: 20px;
+}
+
+#map-container {
+    text-align: center;
+    margin: 20px;
 }
 
 /* daily */
