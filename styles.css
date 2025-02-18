@@ -20,6 +20,11 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+h2 {
+    text-align: center;
+}
+
+/* Hero */
 #hero {
     border: 1px solid black;
     text-align: center;
@@ -87,7 +92,89 @@ body {
     display: none;
 }
 
-
+/* quiz? */
 #quiz-section {
     margin-top: 100px;
+}
+
+#quiz-container {
+    text-align: center;
+}
+
+/* #options-container {
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+} */
+
+.option {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#chart-container {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bar-container {
+    width: 12%;
+    text-align: center;
+}
+
+.bar {
+    height: 0px;
+    width: 100%;
+    background-color: #994c5c;
+    transition: height 0.5s ease;
+}
+
+.bar-container label {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* carousel? stories */
+#stories {
+    border: solid black 1px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* around the world */
+#global-expressions {
+    border: black solid 1px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* daily */
+#daily-challenge {
+    border: black solid 1px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* footer */
+footer {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 1px;
+}
+
+#social-share {
+    margin: 20px;
+}
+
+.share-btn {
+    margin: 0px 20px;
 }
