@@ -27,7 +27,7 @@ optionsContainer.addEventListener("click", (event) => {
             bar.style.height = randomHeight;
         })
     }
-})
+});
 
 //Light/Dark mode
 const themeSwitch = document.getElementById("theme-switch");
