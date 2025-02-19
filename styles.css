@@ -106,14 +106,35 @@ h2 {
 
 #quiz-container {
     text-align: center;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-/* #options-container {
+.option, #start-quiz {
+    width: auto;
+    min-width: 100px;
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#options-container {
     min-height: 50px;
     display: flex;
     justify-content: center;
     gap: 1rem;
-} */
+    margin: 15px 0;
+}
 
 .option {
     margin: 10px;
@@ -124,13 +145,18 @@ h2 {
 
 #chart-container {
     display: flex;
-    justify-content: space-around;
-
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    gap: 20px;
 }
 
 .bar-container {
-    width: 12%;
+    width: 50x;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bar {
@@ -139,15 +165,15 @@ h2 {
     background-color: #994c5c;
     transition: height 0.5s ease;
     border-radius: 5px;
+    margin-top: auto;
 }
 
 .bar-container label {
     margin-top: 10px;
     font-size: 1rem;
     font-weight: bold;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    text-align: center;
+    writing-mode: vertical-tb;
+    transform: none;
 }
 
 

@@ -23,7 +23,7 @@ optionsContainer.addEventListener("click", (event) => {
         optionsContainer.style.display = "none";
 
         bars.forEach(bar => {
-            let randomHeight = Math.floor(Math.random() * 100) + "%";
+            let randomHeight = Math.floor(Math.random() * 100) + 20 + "px";
             bar.style.height = randomHeight;
         })
     }
