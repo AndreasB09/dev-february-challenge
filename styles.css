@@ -18,7 +18,14 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Alice;
 }
+
+.alice-regular {
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
 
 h2 {
     text-align: center;
@@ -206,7 +213,30 @@ h2 {
 
 #map-container {
     text-align: center;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.marker {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ff6584;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+}
+
+.marker:hover {
+    background-color: #e94e77;
+    transform: scale(1.1);
 }
 
 
@@ -215,6 +245,53 @@ h2 {
     border: black solid 1px;
     margin: 20px;
     padding: 20px;
+    text-align: center;
+}
+
+#challenge-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#challenge-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#new-challenge {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#new-challenge:hover {
+    background-color: #e94e77;
+}
+
+#completion-tracker {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* footer */
@@ -229,8 +306,21 @@ footer {
 
 #social-share {
     margin: 20px;
+    
 }
 
 .share-btn {
-    margin: 0px 20px;
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 0px 10px;
+}
+
+.share-btn:hover {
+    background-color: #e94e77;
 }
