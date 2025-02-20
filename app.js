@@ -10,6 +10,7 @@ const startBtn = document.getElementById("start-quiz");
 const optionsContainer = document.getElementById("options-container");
 const questionDisplay = document.getElementById("question-display");
 const bars = document.querySelectorAll(".bar");
+const options = document.querySelectorAll("option");
 
 startBtn.addEventListener("click", () => {
     questionDisplay.textContent = "Pick an option";
@@ -19,8 +20,9 @@ startBtn.addEventListener("click", () => {
 
 optionsContainer.addEventListener("click", (event) => {
     if (event.target.classList.contains("option")) {
-        questionDisplay.textContent = "Your Love Language Distribution:";
+        questionDisplay.textContent = "Click Start to Begin";
         optionsContainer.style.display = "none";
+        startBtn.style.display = "block";
 
         bars.forEach(bar => {
             let randomHeight = Math.floor(Math.random() * 100) + 20 + "px";
@@ -28,6 +30,11 @@ optionsContainer.addEventListener("click", (event) => {
         })
     }
 });
+
+options.forEach(option => {
+    const optionsText = option.getAttribute("data-value");
+    option.textContent = parseInt(optionsText) +1;
+})
 
 //Light/Dark mode
 const themeSwitch = document.getElementById("theme-switch");
