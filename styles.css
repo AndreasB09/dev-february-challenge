@@ -336,6 +336,12 @@ h2 {
     cursor: pointer;
 }
 
+.day.completed {
+    background-color: #ff6584;
+    color: white;
+    border-color: #e94e77;
+}
+
 /* footer */
 footer {
     margin: 20px;

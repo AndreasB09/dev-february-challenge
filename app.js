@@ -86,3 +86,25 @@ stories.forEach((story, index) => {
         updateActiveStory();
     });
 });
+
+// challenge
+const challengeText = document.getElementById("challenge-text");
+const newChallengeBtn = document.getElementById("new-challenge");
+const days = document.querySelectorAll(".day");
+let currentDay = -1;
+
+window.addEventListener("DOMContentLoaded", () => {
+    days.forEach(day => day.classList.remove("completed"));
+})
+
+newChallengeBtn.addEventListener("click", () => {
+    challengeText.textContent = "Comming Soon";
+
+    if (currentDay < days.length - 1) {
+        currentDay++;
+        days[currentDay].classList.add("completed");
+    } else {
+        days.forEach(day => day.classList.remove("completed"));
+        currentDay = -1;
+    }
+});
